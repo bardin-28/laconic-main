@@ -107,8 +107,9 @@ function scripts_libraries() {
             '#src/libraries/swiper-5.3.8/swiper.min.js',
             '#src/libraries/blazy-1.8.2/blazy.min.js',
             '#src/libraries/animate/wow.min.js'
+            // '#src/libraries/bootstrap/bootstrap.min.css'
             // 'src/libraries/fancybox-3.5.7/dist/jquery.fancybox.min.js'
-            // 'src/vendor/wow.min.js',
+            // '#src/libraries/wow/wow.min.js',
             // 'src/vendor/quickaccord.min.js',
             // 'src/vendor/blazy.min.js'
             // 'src/scripts/scripts.js'

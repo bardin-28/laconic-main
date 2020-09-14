@@ -311,8 +311,6 @@ $(document).ready(function () {
 });
 
 // ANIMATION  FUNCTIONS
-new WOW().init();
-
 const toogleMenuBtn = document.getElementsByClassName('header-menu')[0];
 const headerSection = document.getElementsByClassName('header-section')[0];
 const toogleLines = document.querySelector('.header-toogleButton');

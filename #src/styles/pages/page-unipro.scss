@@ -1,7 +1,6 @@
 /* -------------------------------------------------------------------------- 
- * >>> SITE UNIPRO 
+ * >>> PAGE : Unipro 
  * -------------------------------------------------------------------------- */
-
 
  // SCROLL OFF
 .scroll-block {
@@ -76,6 +75,7 @@
 
 // HIDDEN MENU
 .header-hiddenMenu {
+    display: none;
     z-index: 1;
     position: absolute;
     left: 0;
@@ -114,7 +114,7 @@
 }
 
 .offer-section {
-    background: url(../img/unipro-main.jpg) no-repeat center top / cover;
+    background: url(../images/unipro/unipro-main.jpg) no-repeat center top / cover;
     padding-top: 350px;
     position: relative;
 }
@@ -134,6 +134,8 @@
 }
 
 .offer-bBg {
+    line-height: 1.2em;
+    font-size: 50px;
     animation: bBgAnim 1.5s;
     color: #fff;
     background: #000;
@@ -258,7 +260,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url(../img/unipro-colors.png) no-repeat center right / contain;
+    background: url(../images/unipro/unipro-colors.png) no-repeat center right / contain;
     right: 0;
     top: 0;
 }
@@ -562,122 +564,121 @@
         margin-bottom: 57px;
         font-size: 20px;
     }
-}
-
-.wpcf7-list-item-label {
-    font-size: 11px;
-}
-
-.wpcf7-form {
-    input[type="submit"] {
-        display: block;
-        width: auto;
-        height: 100%;
-        position: relative;
-        font-size: 30px;
-        background: transparent;
-        margin-bottom: 50px;
-        font-weight: 500;
-        margin-left: 60%;
-        transition: $anim1;
-
-        &:hover {
-            color: #FFCC00;
-
+    .wpcf7-list-item-label {
+        font-size: 11px;
+    }
+    
+    .wpcf7-form {
+        input[type="submit"] {
+            display: block;
+            width: auto;
+            height: 100%;
+            position: relative;
+            font-size: 30px;
+            background: transparent;
+            margin-bottom: 50px;
+            font-weight: 500;
+            margin-left: 60%;
+            transition: $anim1;
+    
+            &:hover {
+                color: #FFCC00;
+    
+            }
         }
-    }
-
-    input {
-        width: 100%;
-        height: 35px;
-        margin-bottom: 10px;
-        padding: 18px 16px;
-        font-size: 15px;
-    }
-
-    textarea {
-        width: 100%;
-        height: 91px;
-        resize: none;
-        margin-bottom: 17px;
-        padding: 18px 16px;
-        font-size: 15px;
-    }
-
-    label {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-
+    
         input {
-            width: 13px;
-            height: 13px;
-            margin-bottom: 0;
-            margin-right: 3px;
+            width: 100%;
+            height: 35px;
+            margin-bottom: 10px;
+            padding: 18px 16px;
+            font-size: 15px;
+        }
+    
+        textarea {
+            width: 100%;
+            height: 91px;
+            resize: none;
+            margin-bottom: 17px;
+            padding: 18px 16px;
+            font-size: 15px;
+        }
+    
+        label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+    
+            input {
+                width: 13px;
+                height: 13px;
+                margin-bottom: 0;
+                margin-right: 3px;
+            }
         }
     }
-}
-
-.wpcf7-checkbox input {
-    display: none;
-}
-
-.wpcf7-checkbox .wpcf7-list-item-label {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 10px;
-    line-height: 150%;
-    color: #000000;
-    padding-left: 15px;
-    position: relative;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.wpcf7-checkbox .wpcf7-list-item-label:before {
-    width: 10px;
-    height: 10px;
-    display: block;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid #000000;
-}
-
-.wpcf7-checkbox .wpcf7-list-item-label:after {
-    width: 10px;
-    height: 10px;
-    display: block;
-    content: '';
-    background-color: #000000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid #000000;
-    opacity: 0;
-}
-
-.wpcf7-checkbox input:checked~.wpcf7-list-item-label:after {
-    opacity: 1;
+    
+    .wpcf7-checkbox input {
+        display: none;
+    }
+    
+    .wpcf7-checkbox .wpcf7-list-item-label {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 150%;
+        color: #000000;
+        padding-left: 15px;
+        position: relative;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    .wpcf7-checkbox .wpcf7-list-item-label:before {
+        width: 10px;
+        height: 10px;
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid #000000;
+    }
+    
+    .wpcf7-checkbox .wpcf7-list-item-label:after {
+        width: 10px;
+        height: 10px;
+        display: block;
+        content: '';
+        background-color: #000000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid #000000;
+        opacity: 0;
+    }
+    
+    .wpcf7-checkbox input:checked~.wpcf7-list-item-label:after {
+        opacity: 1;
+    }
+    
 }
 
 .footer-section {
-    background: url(../img/unipro-footer.png) no-repeat center top / cover;
+    background: url(../images/unipro/unipro-footer.png) no-repeat center top / cover;
     color: #fff;
 }
 
 .footer {
     padding-top: 33px;
     padding-bottom: 43px;
-}
-
-h2 {
-    font-size: 33px;
-    margin-bottom: 25px;
+    h2 {
+        font-size: 33px;
+        margin-bottom: 25px;
+    }
 }
 
 .footer-info {
