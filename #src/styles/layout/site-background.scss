@@ -1,0 +1,197 @@
+/* -------------------------------------------------------------------------- 
+ * >>> SITE BACKGROUND 
+ * -------------------------------------------------------------------------- */
+
+.site-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+
+/* LINES */
+/* -------------------------------------------------------------------------- */
+
+.line {
+  background-color: #E7E7E7;
+  position: absolute;
+}
+
+.line-vertical {
+  width: 1px;
+  height: 100vh;
+  top: 0;
+  transition: all .24s ease-in-out;
+}
+
+/* LINE : vertical */
+/* -------------------------------------------------------------------------- */
+
+.line-vertical-01 {
+  // left: 18.22916666666667%; // 350px
+  left: px(8px, 'xs');
+
+  @include md-up {
+    left: px(179px, 'md');
+  }
+
+  @include lg-up {
+    left: px(251px, 'lg');
+  }
+
+  @include xl-up {
+    left: px(260px, 'xl');
+  }
+
+  @include hd-up {
+    left: px(350px, 'hd');
+  }
+
+  // @at-root .animate-start & {
+  //   height: 0;
+  // }
+  // @at-root .animate-finish & {
+  //   height: 100vh;
+  // }
+}
+
+.line-vertical-02 {
+  left: px(100px, 'xs');
+
+  @include md-up {
+    left: px(369px, 'md');
+  }
+
+  @include lg-up {
+    left: px(587px, 'lg');
+  }
+
+  @include xl-up {
+    left: px(640px, 'xl');
+  }
+
+  @include hd-up {
+    left: px(836px, 'hd');
+  }
+}
+
+.line-vertical-03 {
+  left: px(193px, 'xs');
+
+  @include md-up {
+    left: px(556px, 'md');
+  }
+
+  @include lg-up {
+    left: px(923px, 'lg');
+  }
+
+  @include xl-up {
+    left: px(990px, 'xl');
+  }
+
+  @include hd-up {
+    left: px(1326px, 'hd');
+  }
+}
+
+.line-vertical-04 {
+  left: px(290px, 'xs');
+
+  @include md-up {
+    left: px(749px, 'md');
+  }
+
+  @include lg-up {
+    left: px(1277px, 'lg');
+  }
+
+  @include xl-up {
+    left: px(1276px, 'xl');
+  }
+
+  @include hd-up {
+    left: px(1814px, 'hd');
+  }
+}
+
+.line-vertical-05 {
+  left: px(352px, 'xs');
+
+  @include md-up {
+    opacity: 0;
+  }
+
+  // @at-root .animate-start & {
+  //   height: 0;
+  // }
+
+
+  // @at-root .animate-finish & {
+  //   height: 100vh;
+  // }
+}
+
+
+/* LINE : horizontal */
+/* -------------------------------------------------------------------------- */
+
+.line-horizontal-01 {
+  width: 100vw;
+  height: 1px;
+  left: 0;
+  opacity: 0;
+
+  @include lg-up {
+    top: 73px;
+    opacity: 1;
+  }
+
+  @include xl-up {
+    top: 130px;
+  }
+
+  // @at-root .animate-start & {
+  //   width: 0;
+  // }
+
+
+  // @at-root .animate-finish & {
+  //   width: 100vw;
+  // }
+}
+
+
+.line-horizontal-02 {
+  width: 100vw;
+  height: 1px;
+  top: auto;
+  left: auto;
+  right: 0;
+  opacity: 0;
+
+  @include lg-up {
+    bottom: 92px;
+    opacity: 1;
+  }
+
+  @include xl-up {
+    bottom: 144px;
+  }
+
+  @include hd-up {
+    bottom: 128px;
+  }
+
+  // @at-root .animate-start & {
+  //   width: 0;
+  // }
+
+
+  // @at-root .animate-finish & {
+  //   width: 100vw;
+  // }
+}

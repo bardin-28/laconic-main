@@ -1,0 +1,236 @@
+/* -------------------------------------------------------------------------- 
+ * >>> TABLE OF UTILS : 
+ * -------------------------------------------------------------------------- */
+
+/* Utils */
+/* -------------------------------------------------------------------------- */
+@import 'utils/_variables';
+@import 'utils/_functions';
+@import 'utils/_mixins';
+@import 'utils/_media-queries';
+@import 'utils/_media.scss';
+@import 'utils/_fonts';
+@import 'utils/_reset';
+// @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+/* Layout */
+/* -------------------------------------------------------------------------- */
+@import 'layout/site-background';
+@import 'layout/site-header';
+@import 'layout/site-footer';
+
+/* Components */
+/* -------------------------------------------------------------------------- */
+@import 'components/swiper_5.3.8/swiper';
+@import 'components/contact-form-7/styles';
+@import 'components/contact-form-7/custom';
+// @import '../libraries/animate/animate.min.css';
+@import 'components/animation';
+@import './components/lightbox.min.scss';
+
+
+/* Pages */
+/* -------------------------------------------------------------------------- */
+@import 'pages/page-intro';
+@import 'pages/page-contacts';
+@import 'pages/page-about';
+@import 'pages/page-portfolio';
+// @import './pages/unipro.scss';
+
+
+/* Main Page */
+/* -------------------------------------------------------------------------- */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.page-index {
+  overflow: hidden;
+
+  &.site-menu-open {
+
+    .site-content,
+    .screen-menu {
+      display: none;
+    }
+
+    .site-menu {
+      display: block;
+    }
+
+    .line-vertical-03 {
+      opacity: 0;
+
+      @include md-up {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.b-lazy {
+  -webkit-transition: opacity 500ms ease-in-out;
+  -moz-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+  max-width: 100%;
+  opacity: 0;
+}
+
+.b-lazy.b-loaded {
+  opacity: 1;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  word-break: normal;
+}
+
+h1 {
+  font-weight: bold;
+  font-style: 400;
+}
+
+.screen-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.screen-slide-inner {
+  height: 100%;
+  padding: 50px px(8px, 'xs');
+  box-sizing: border-box;
+
+  @include xs-up {
+    padding: 50px 30px;
+  }
+
+  @include md-up {
+    padding: 50px 50px;
+  }
+
+  @include lg-up {
+    padding: 50px 100px;
+  }
+
+  @include xl-up {
+    padding: 100px;
+  }
+
+  @include hd-up {
+    padding: 100px 200px;
+  }
+}
+
+.screen-slide-content {
+  width: 100%;
+  height: 100%;
+}
+
+.screen-slide-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: px(24px, 'xs');
+  line-height: 110%; /* or 55px */
+  color: #000000;
+
+  @include md-up {
+    padding-top: px(161px, 'md');
+    padding-bottom: 11px;
+    font-size: 50px;
+  }
+
+  @include lg-up {
+    padding-top: px(151px, 'lg');
+    padding-left: px(260px, 'lg');
+    padding-bottom: 20px;
+    font-size: 50px;
+  }
+
+  @include xl-up {
+    padding-top: px(151px, 'xl');
+    padding-left: px(350px, 'xl');
+    padding-bottom: 20px;
+    font-size: 50px;
+  }
+}
+
+.screen-slide-exerpt {
+  font-style: normal;
+  font-weight: normal;
+  font-size: px(16px, 'xs');
+  line-height: 150%; /* or 24px */
+  color: #000000;
+}
+
+.services-navigation {
+  position: absolute;
+  top: 450px;
+
+  &:before {
+    display: block;
+    content: attr(data-index);
+    position: absolute;
+    top: -23px;
+    left: -15px;
+    transform: translateX(-100%);
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 150%; /* or 75px */
+    text-align: center;
+
+    color: #FFCB05;
+
+  }
+
+  &[data-index="01"] {
+    left: 18.22916666666667%;
+  }
+
+  &[data-index="02"] {
+    left: 43.54166666666667%;
+  }
+
+  &[data-index="03"] {
+    left: 69.0625%;
+  }
+}
+
+.screen-rotator {
+
+  @media (orientation: landscape) and (max-width: 767.98px){
+    width: 120vw;
+    height: 120vh;
+    position: fixed;
+    top: -10vh;
+    left: -10vw;
+    background-color: #ffffff;
+    z-index: 9999;
+  }
+
+  @media (min-width: 1200.98px){
+    display: none;
+  }
+}
+
+.swiper-button-disabled {
+  display: none;
+}

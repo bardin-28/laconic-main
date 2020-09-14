@@ -1,0 +1,146 @@
+@keyframes animation-header-titles {
+    0% {
+        -webkit-transform: translate3d(0,-500%,0);
+        transform: translate3d(0,-500%,0);
+        visibility: visible
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.animation-header-titles {
+    -webkit-animation-name: animation-header-titles;
+    animation-name: animation-header-titles;
+}
+
+
+.header-titles {
+	animation-name: animation-header-titles;
+	animation-delay: 1s;
+	animation-duration: .5s;
+}
+
+
+
+
+
+
+
+@keyframes animation-menu-toggle {
+    0% {
+        -webkit-transform: translate3d(0,-500%,0);
+        transform: translate3d(0,-500%,0);
+        visibility: visible
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.animation-menu-toggle {
+    -webkit-animation-name: animation-menu-toggle;
+    animation-name: animation-menu-toggle;
+}
+
+.menu-toggle {
+	animation-delay: 1s;
+	animation-duration: .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes animation-menu-toggle-text {
+
+  from {
+  	width: 0;
+    // transform: translate3d(100%, 0, 0);
+    // visibility: visible;
+  }
+
+  to {
+  	width: 63px;
+    // transform: translate3d(0, 0, 0);
+  }
+}
+
+.animation-menu-toggle-text {
+  overflow: hidden;
+  animation-name: animation-menu-toggle-text;
+}
+
+
+
+.animation-menu-toggle-text {
+    -webkit-animation-name: animation-menu-toggle-text;
+    animation-name: animation-menu-toggle-text;
+}
+
+.menu-toggle-text {
+	animation-delay: 2s;
+	animation-duration: 1s;	
+}
+
+
+.home-intro-title {
+
+	span {
+		// animation-delay: 0.5s;
+
+		&:nth-child(1) {
+			// animation-duration: 1s;
+		}
+
+		&:nth-child(2) {
+			// animation-duration: 1s;
+			// animation-delay: 0.8s;
+		}
+	}
+}
+
+
+
+
+
+
+
+@keyframes animation-lang-menu {
+    0% {
+        -webkit-transform: translate3d(0,500%,0);
+        transform: translate3d(0,500%,0);
+        visibility: visible
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.animation-lang-menu {
+    -webkit-animation-name: animation-lang-menu;
+    animation-name: animation-lang-menu;
+}
+
+.lang-menu {
+	animation-delay: 1s;
+	animation-duration: .5s;
+}
+
+
+

@@ -1,0 +1,203 @@
+.wpcf7-form-control {
+
+  &.wpcf7-text,
+  &.wpcf7-textarea {
+    width: 100%;
+    display: block;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+    color: #000000;
+
+    padding: 0 14px 4px;
+    margin-top: 10px;
+
+    border: none;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+
+    // -webkit-user-select: none;
+    // -moz-user-select: none;
+    // -ms-user-select: none;
+    // user-select: none;
+
+    box-sizing: border-box;
+    background-color: transparent;
+
+    resize: none;
+
+    @include md-up {
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    @include lg-up {
+      font-size: 10px;
+      line-height: 15px;
+      padding: 0 16px 7px;
+      margin-top: 5px;
+    }
+
+    @include placeholder {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 15px;
+      color: #000000;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      @include md-up {
+        font-size: 15px;
+        line-height: 22px;
+      }
+
+      @include lg-up {
+        font-size: 10px;
+        line-height: 15px;
+      }
+    }
+  }
+}
+
+.wpcf7-checkbox {
+
+  input {
+    display: none;
+  }
+
+  .wpcf7-list-item-label {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 150%; /* or 15px */
+
+    color: #000000;
+    padding-left: 15px;
+    position: relative;
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    @include md-up {
+      font-size: 15px;
+      line-height: 22px;
+      padding-left: 35px;
+    }
+
+    @include lg-up {
+      font-size: 10px;
+      line-height: 150%; /* or 15px */
+      padding-left: 20px;
+    }
+
+    &:before {
+      width: 10px;
+      height: 10px;
+      display: block;
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #000000;
+
+      @include md-up {
+        width: 20px;
+        height: 20px;
+      }
+
+      @include lg-up {
+        width: 11px;
+        height: 11px;
+      }
+    }
+
+    &:after {
+      width: 10px;
+      height: 10px;
+      display: block;
+      content: '';
+      background-color: #000000;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #000000;
+      opacity: 0;
+
+      @include md-up {
+        width: 20px;
+        height: 20px;
+      }
+
+      @include lg-up {
+        width: 11px;
+        height: 11px;
+      }
+    }
+  }
+
+  input:checked ~ .wpcf7-list-item-label:after {
+    opacity: 1;
+  }
+}
+
+.checkbox-867 {
+  margin-top: 20px;
+}
+
+
+.wpcf7-submit {
+  width: 100%;
+  max-width: 178px;
+  display: block;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 150%; /* or 30px */
+
+  text-transform: uppercase;
+  color: #000000;
+
+  background: #FFFFFF;
+  border: 0;
+  border-radius: 0;
+  padding: 0 24px;
+  margin: 30px auto 0;
+  box-sizing: border-box;
+
+  @include md-up {
+    max-width: 316px;
+    height: 52px;
+    font-size: 25px;
+    line-height: 150%; /* or 37px */
+  }
+
+  @include lg-up {
+    max-width: 216px;
+    height: 32px;
+    font-size: 20px;
+    line-height: 150%; /* or 30px */
+    margin: 15px auto 0 0;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}

@@ -1,0 +1,129 @@
+/* Media Queries */
+/* -------------------------------------------------------------------------- */
+
+$xs: 0;
+$sm: 360px;
+$md: 768px;
+$lg: 992px;
+$xl: 1920px;
+
+
+/* design 360px */
+$sm-down:               '(max-width: 575.98px)';
+/* design 768px */
+$md-down:               '(max-width: 767.98px)';
+/* design 768px */
+$tablet-portrait:      '(max-width: 991.98px)';
+/* design 1024px */
+$tablet-landscape:     '(max-width: 1219.98px)';
+/* design 1440px */
+$desktop:              '(max-width: 1439.98px)';
+/* design 1920px */
+$retina:               '(max-width: 1679.98px)';
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+$xs-up:                '(min-width: 360px)';
+
+// Small devices (landscape phones, 576px and up)
+$sm-up:                '(min-width: 576px)';
+
+// Medium devices (tablets, 768px and up)
+$md-up:                '(min-width: 768px)';
+
+// Medium devices (tablets, 992px and up)
+// $tablet-landscape-up:  '(min-width: 992px)';
+
+// Extra large devices (large desktops, 1200px and up)
+$lg-up:            '(min-width: 1220px)';
+
+// Large devices (hd, 1440px and up)
+$xl-up:            '(min-width: 1440px)';
+
+// Large devices (hd, 1440px and up)
+$hd-up:            '(min-width: 1920px)';
+
+
+// $extra-small: '(max-width: 320px)';
+// $tablet-md:   '(max-width: 990px)';
+// $laptop:      '(max-width: 1366px)';
+
+// $desktop-only: '(min-width: 990.99px)';
+// $laptop-only: '(min-width: 990.99px) and (max-width: 1366px)';
+// $tablet-only: '(min-width: 576.99px) and (max-width: 990px)';
+
+// @mixin small-up {
+//   @media screen and #{$small-up} {
+//     @content;
+//   }
+// }
+
+@mixin xs-up {
+  @media screen and #{$xs-up} {
+    @content;
+  }
+}
+
+@mixin sm-up {
+  @media screen and #{$sm-up} {
+    @content;
+  }
+}
+
+@mixin md-up {
+  @media screen and #{$md-up} {
+    @content;
+  }
+}
+
+@mixin lg-up {
+  @media screen and #{$lg-up} {
+    @content;
+  }
+}
+
+@mixin xl-up {
+  @media screen and #{$xl-up} {
+    @content;
+  }
+}
+
+@mixin hd-up {
+  @media screen and #{$hd-up} {
+    @content;
+  }
+}
+
+
+
+
+@mixin sm-down {
+  @media screen and #{$sm-down} {
+    @content;
+  }
+}
+
+@mixin md-down {
+  @media screen and #{$md-down} {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media screen and #{$tablet-landscape} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and #{$desktop} {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media screen and #{$retina} {
+    @content;
+  }
+}

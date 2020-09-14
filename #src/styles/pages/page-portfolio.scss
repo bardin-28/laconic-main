@@ -1,0 +1,489 @@
+/* -------------------------------------------------------------------------- 
+ * >>> SITE PORTFOLIO 
+ * -------------------------------------------------------------------------- */
+
+.page-portfolio {
+
+  .site-content {
+    padding-top: 130px;
+  }
+}
+
+.portfolio-banner-inner,
+.portfolio-description-inner,
+.portfolio-tasks-inner,
+.portfolio-responsive-inner {
+  width: 64%;
+  margin: auto;
+}
+
+.portfolio-tasks-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 110%; /* or 55px */
+  color: #000000;
+}
+
+
+/* SCREEN Portfolio Banner */
+/* -------------------------------------------------------------------------- */
+
+.portfolio-banner {
+  height: calc(100vh - 130px);
+}
+
+.portfolio-banner-inner {
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+.portfolio-banner-background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 5;
+}
+
+.portfolio-banner-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 110%; /* or 55px */
+  text-transform: uppercase;
+  color: #FFFFFF;
+  position: absolute;
+}
+
+.portfolio-banner-subtitle {
+  position: absolute;
+}
+
+
+/* SCREEN Portfolio Description */
+/* -------------------------------------------------------------------------- */
+
+.portfolio-description {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.portfolio-description-inner {
+  position: relative;
+}
+
+.portfolio-description-logo {
+  width: 175px;
+  height: auto;
+  display: block;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+}
+
+.portfolio-description-exerpt {
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%; /* or 30px */
+  color: #000000;
+  padding-left: 200px;
+  box-sizing: border-box;
+}
+
+
+/* SCREEN Portfolio Description */
+/* -------------------------------------------------------------------------- */
+
+.portfolio-tasks {
+  margin-bottom: 100px;
+}
+
+.portfolio-tasks-inner {
+
+}
+
+.portfolio-tasks-title {
+  margin-bottom: 50px;
+}
+
+.portfolio-tasks-list {
+  width: 100%;
+  display: flex;
+}
+
+.tasks-list-item {
+  width: 415px;
+  position: relative;
+}
+
+.tasks-list-item-wrap {
+  padding-left: 85px;
+
+  &:before {
+    display: block;
+    content: attr(data-index);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 1em;
+    text-align: center;
+    color: #FFCB05;
+  }
+}
+
+.portfolio-task-title {
+  width: 255px;
+  display: block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 100%; /* or 30px */
+  color: #000000;
+  margin-bottom: 28px;
+}
+
+.portfolio-task-exerpt {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 150%; /* or 30px */
+  color: #000000;
+}
+
+
+/* SCREEN Portfolio Description */
+/* -------------------------------------------------------------------------- */
+
+.portfolio-video {
+  margin-bottom: 100px;
+}
+
+.portfolio-media-video {
+  background: #C4C4C4;
+  position: relative;
+}
+
+.portfolio-media-link {
+  display: block;
+}
+
+.portfolio-media-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* SCREEN Portfolio Cases */
+/* -------------------------------------------------------------------------- */
+
+.portfolio-case-options {
+
+}
+
+.case-uikit-inner,
+.case-technologies-inner,
+.case-developed-pages-inner,
+.case-responsive-inner,
+.case-external-inner {
+  width: 100%;
+  max-width: 64%;
+  margin: auto;
+}
+
+.case-uikit-title,
+.case-technologiess-title,
+.case-developed-pages-title,
+.case-responsive-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 110%; /* or 55px */
+  color: #000000;
+}
+
+
+/* Case UiKIT */
+
+.case-uikit {
+  margin-bottom: 100px;
+}
+
+.case-uikit-inner {
+
+}
+
+.case-uikit-title {
+  margin-bottom: 50px;
+}
+
+.case-uikit-item {
+  margin-bottom: 50px;
+}
+
+.case-uikit-item-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 100%; /* or 30px */
+  color: #000000;
+  margin-bottom: 28px;
+}
+
+.case-uikit-text {
+
+}
+
+.case-uikit-item-colors {
+  display: flex;
+
+}
+
+.case-uikit-color {
+  margin-right: 25px; 
+}
+
+.case-color-image {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 8px;
+
+  .circle-lg,
+  .circle-md,
+  .circle-sm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  .circle-lg {
+    width: 56px;
+    height: 56px;
+    opacity: 0.1;
+  }
+
+  .circle-md {
+    width: 48px;
+    height: 48px;
+    opacity: 0.3;
+  }
+
+  .circle-sm {
+    width: 40px;
+    height: 40px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.case-color-circle {
+  border-radius: 50%;
+}
+
+.case-color-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%; /* identical to box height, or 18px */
+  color: #afafaf;
+  text-transform: uppercase;
+}
+
+
+/* Case Technologies */
+
+.case-technologies {
+  margin-bottom: 100px;
+}
+
+.case-technologiess-title {
+  margin-bottom: 50px;
+}
+
+.case-technologiess-list {
+  width: 100%;
+  max-width: 425px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.case-technologiess-list-item {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 25px 25px 0;
+}
+
+
+/* Case Developed Pages */
+
+.case-developed-pages {
+
+}
+
+.case-developed-pages-inner {
+
+}
+
+.case-developed-pages-title  {
+  margin-bottom: 50px;
+}
+
+.case-developed-pages-gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  img:nth-child(2) {
+    padding-top: 180px;
+  }
+
+  // 290px;
+}
+
+.case-developed-pages-gallery-item {
+  display: block;
+  width: 25%;
+  height: 100%;
+}
+
+
+/* Case Responsive */
+
+.case-responsive {
+  margin-bottom: 100px;
+}
+
+.case-responsive-title {
+  margin-bottom: 20px;
+}
+
+.case-responsive-desc {
+  width: 50%;
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%; /* or 30px */
+  color: #000000;
+  margin-bottom: 50px;
+}
+
+.case-external-link {
+  text-align: center;
+  padding-bottom: 100px;
+
+  a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 150%; /* identical to box height, or 45px */
+    text-align: center;
+    color: #FFCC00;
+    border-bottom: 2px solid #FFCC00;
+    cursor: pointer;
+  }
+}
+
+
+/* SCREEN Portfolio Footer */
+/* -------------------------------------------------------------------------- */
+
+.portfolio-footer {
+  padding-top: 35px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.portfolio-footer-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.portfolio-footer-inner {
+  width: 1080px;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+}
+
+.portfolio-footer-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 110%; /* or 33px */
+  color: #FFFFFF;
+  margin-bottom: 18px;
+}
+
+.portfolio-footer-logo {
+  margin-bottom: 40px;
+
+  img {
+
+  }
+}
+
+.portfolio-footer-tag {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 150%; /* or 18px */
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+
+.portfolio-footer-link {
+  text-align: right;
+
+  a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%; /* or 30px */
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding-right: 25px;
+    position: relative;
+
+    &:after {
+      display: block;
+      content: '';
+      width: 20px;
+      height: 2px;
+      background-color: $white;
+
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+
+      @include lg-up {
+        bottom: -3px;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+/* PLACEHOLDER mixin */
+/* -------------------------------------------------------------------------- */
+
+@mixin placeholder {
+    // &.placeholder { @content; }
+    &:-moz-placeholder { @content; } /* Firefox 18- */
+    &::-moz-placeholder { @content; } /* Firefox 19+ */
+    &::-webkit-input-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+  }

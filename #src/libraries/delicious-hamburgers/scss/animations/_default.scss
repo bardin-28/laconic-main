@@ -1,0 +1,23 @@
+@import '../variables';
+
+@if index($hamburger-animations, default) {
+    .#{$hamburger-class-name}--default {
+        &.active {
+            span.bar {
+                top: 0;
+
+                &:nth-child(1) {
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}

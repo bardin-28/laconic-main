@@ -1,0 +1,31 @@
+@import '../variables';
+
+@if index($hamburger-animations, push) {
+    .#{$hamburger-class-name}--push {
+        overflow: hidden;
+
+        > .inner {
+            transition: transform 0.4s / $hamburger-animation-speed $hamburger-easing;
+
+            &::before,
+            &::after {
+                @include hamburger-bar();
+                top: -$hamburger-size * 1.1;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+        
+        &.active {
+            > .inner {
+                transform: translate3d(0, $hamburger-size * 1.1, 0);
+            }
+        }
+    }
+}

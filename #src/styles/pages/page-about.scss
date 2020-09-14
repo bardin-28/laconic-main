@@ -1,0 +1,251 @@
+/* -------------------------------------------------------------------------- 
+ * >>> SITE about 
+ * -------------------------------------------------------------------------- */
+
+.about-section {
+	width: 100%;
+	height: 100%;
+	.page-content {
+		width: 95%;
+		margin: 0 auto;
+
+		@include md-up {
+			width: 95%;
+	  	}
+	  	@include lg-up {
+			width: 85%;
+	  	}
+	  	@include xl-up {
+			width: 89%;
+	  	}
+	}	
+}
+
+
+.about-us {
+
+	.about-us-content {
+		display: flex;
+		flex-direction: column;
+		margin-top: 40px;
+
+		@include md-up {
+			flex-direction: column;
+	  	}
+	  	@include lg-up {
+			flex-direction: row;
+		}
+	  	@include xl-up {
+			flex-direction: row;
+	  	}
+
+		.left {
+			position: relative;
+			display: none;
+			width: 570px;
+			height: 465px;
+
+			@include md-up {
+				display: flex;
+				width: 400px;
+				height: 335px;
+		  	}
+		  	@include lg-up {
+				display: flex;
+				width: 570px;
+				height: 465px;
+		  	}
+		  	@include xl-up {
+				display: flex;
+				width: 570px;
+				height: 465px;
+		  	}
+
+			img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			.img-bg {
+				position: absolute;
+				bottom: -28px;
+				right: -28px;
+				width: 63%;
+				height: 100%;
+				background: #C4C4C4;
+			}
+		}
+		.right {
+			width: 100%;
+			margin-left: 0px;
+			padding-top: 40px;
+
+			@include md-up {
+				width: 100%;
+				margin-left: 0px;
+		  	}
+		  	@include lg-up {
+				width: 45%;
+				margin-left: 150px;
+		  	}
+		  	@include xl-up {
+				width: 45%;
+				margin-left: 150px;
+		  	}
+
+			.text {
+				// font-family: 'GothamPro-Light';
+				font-size: 16px;
+				line-height: 150%;
+				margin-bottom: 20px;
+
+				@include md-up {
+					font-size: 20px;
+			  	}
+			  	@include lg-up {
+					font-size: 20px;
+			  	}
+			  	@include xl-up {
+					font-size: 20px;
+			  	}
+			}
+		}
+	}
+}
+
+.testimonials {
+	.testimonials-content {
+		margin-top: 40px;
+
+		iframe {
+			width: 100%;
+			height: 330px;
+			margin-left: 0px;
+
+			@include md-up {
+				width: 100%;
+				height: 585px;
+		  	}
+		  	@include lg-up {
+				width: 61%;
+				height: 585px;
+				margin-left: px(145px, 'lg');
+		  	}
+		  	@include xl-up {
+				width: 61%;
+				height: 585px;
+				margin-left: px(235px, 'xl');
+		  	}
+		}
+	}
+}
+
+.contact-form {
+	.page-content {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		padding-top: px(10px, 'xs');
+		padding-left: 0px;
+		padding-bottom: 11px;
+
+		@include md-up {
+			flex-direction: column;
+			padding-top: px(30px, 'md');
+			padding-bottom: 11px;
+			font-size: 50px;
+		}
+		@include lg-up {
+			flex-direction: row;
+			padding-top: px(30px, 'lg');
+			padding-left: px(260px, 'lg');
+			padding-bottom: 20px;
+			font-size: 50px;
+		}
+		@include xl-up {
+			flex-direction: row;
+			padding-top: px(30px, 'xl');
+			padding-left: px(350px, 'xl');
+			padding-bottom: 20px;
+			font-size: 50px;
+		}
+		.left {
+			display: none;			
+
+			@include md-up {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				width: 100%;
+			}
+			@include lg-up {
+				display: flex;
+				width: 30%;
+			}
+			@include xl-up {
+				display: flex;
+				flex-direction: column;
+				width: 30%;
+			}
+
+			.information-item {
+				margin-bottom: 60px;
+
+				@include md-up {
+					margin-bottom: 20px;
+				}
+				@include lg-up {
+					margin-bottom: 60px;
+				}
+				@include xl-up {
+					margin-bottom: 60px;
+				}
+
+				.name {
+					// font-family: 'GothamPro-Light';
+					font-size: 20px;
+					line-height: 150%;
+				}
+				.info-value {
+					// font-family: 'GothamPro-Medium';
+					font-size: 30px;
+					line-height: 150%;	
+
+					@include md-up {
+						margin-bottom: 20px;
+						font-size: 16px;
+					}
+					@include lg-up {
+						margin-bottom: 60px;
+						font-size: 30px;
+					}
+					@include xl-up {
+						margin-bottom: 60px;
+						font-size: 30px;
+					}				
+				}
+			}
+		}
+		.right {
+			width: 100%;
+			height: 460px;
+			background: #F5F5F5;
+
+
+			@include md-up {
+				width: 100%;
+				height: 520px;
+			}
+			@include lg-up {
+				width: 70%;
+				height: 615px;
+			}
+			@include xl-up {
+				width: 70%;
+				height: 615px;
+			}
+		}
+	}
+}

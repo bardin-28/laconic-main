@@ -1,0 +1,53 @@
+// Mixin px to vw
+// ===============================================
+
+@function px($target, $mq) {
+
+    @if $mq == 'hd' {
+      $vw-context: (1920 * .01) * 1px;
+      @return ($target / $vw-context) * 1vw;
+    } @else if $mq == 'xl' {
+      $vw-context: (1440 * .01) * 1px;
+      @return ($target / $vw-context) * 1vw;
+    } @else if $mq == 'lg' {
+      $vw-context: (1366 * .01) * 1px;
+      @return ($target / $vw-context) * 1vw;
+    } @else if $mq == 'md' {
+      $vw-context: (768 * .01) * 1px;
+      @return ($target / $vw-context) * 1vw;
+    } @else if $mq == 'xs' {
+      $vw-context: (360 * .01) * 1px;
+      @return ($target / $vw-context) * 1vw;
+    }
+  }
+  
+  
+  // PX to Viewport conversion
+  // =============================================================================
+  
+  // SASS PX to VH Function: https://pxtovh.toshev.bg/
+  // -------------------------------------------------------------------------- */
+  
+  /* @function get-vh($object) {
+   *     $vh: (768 * 0.01) * 1px;
+   *     @return ($object / $vh) * 1vh;
+   * } */
+  
+  @function get-vh($object, $screen) {
+      $vh: ($screen * 0.01) * 1px;
+      @return ($object / $vh) * 1vh;
+  }
+  
+  // SASS PX to VW Function: https://pxtovw.toshev.bg/
+  // -------------------------------------------------------------------------- */
+  
+  /*  @function get-vw($object) {
+   *      $vw: (1024 * 0.01) * 1px;
+   *      @return ($object / $vw) * 1vw;
+   * } */
+  
+  @function get-vw($object, $screen) {
+      $vw: ($screen * 0.01) * 1px;
+      @return ($object / $vw) * 1vw;
+  }
+  
