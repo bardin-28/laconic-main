@@ -101,17 +101,17 @@ function js() {
 function scripts_libraries() {
     return gulp.src([
             '#src/libraries/jquery-3.4.1/jquery-3.4.1.min.js',
-            // 'src/libraries/bootstrap_4.5.0/dist/js/bootstrap.bundle.min.js',
+            // '#src/libraries/bootstrap_4.5.0/dist/js/bootstrap.bundle.min.js',
             '#src/libraries/fullPage-3.0.8/scrolloverflow.min.js',
             '#src/libraries/fullPage-3.0.8/fullpage.min.js',
             '#src/libraries/swiper-5.3.8/swiper.min.js',
             '#src/libraries/blazy-1.8.2/blazy.min.js',
-            '#src/libraries/animate/wow.min.js'
+            // '#src/libraries/animate/wow.min.js'
             // '#src/libraries/bootstrap/bootstrap.min.css'
-            // 'src/libraries/fancybox-3.5.7/dist/jquery.fancybox.min.js'
+            // '#src/libraries/fancybox-3.5.7/dist/jquery.fancybox.min.js'
             // '#src/libraries/wow/wow.min.js',
             // 'src/vendor/quickaccord.min.js',
-            // 'src/vendor/blazy.min.js'
+            // '#src/vendor/blazy.min.js'
             // 'src/scripts/scripts.js'
         ])
         // .pipe(sourcemaps.init())

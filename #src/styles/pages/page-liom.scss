@@ -1,17 +1,9 @@
-/* -------------------------------------------------------------------------- 
- * >>> PAGE : Unipro 
- * -------------------------------------------------------------------------- */
-
- // SCROLL OFF
+// SCROLL OFF
 .scroll-block {
     overflow: hidden;
 }
-.menu-active {
-    margin-right: 10px;
-}
 
-/* SCREEN Unipro Header */
-/* -------------------------------------------------------------------------- */
+// Header section
 .header-container {
     padding: 25px 5%;
     margin: 0 auto;
@@ -74,8 +66,11 @@
 }
 
 // HIDDEN MENU
+.menu-active {
+    margin-right: 10px;
+}
+
 .header-hiddenMenu {
-    display: none;
     z-index: 1;
     position: absolute;
     left: 0;
@@ -91,8 +86,7 @@
     font-size: 100px;
 }
 
-/* SCREEN Unipro Offer */
-/* -------------------------------------------------------------------------- */
+// OFFER SECTION
 @keyframes bBgAnim {
     from {
         width: 0px;
@@ -114,7 +108,7 @@
 }
 
 .offer-section {
-    background: url(../images/unipro/unipro-main.jpg) no-repeat center top / cover;
+    background: url(../images/liom/liom-mainBg.jpg) no-repeat center top / cover;
     padding-top: 350px;
     position: relative;
 }
@@ -135,8 +129,6 @@
 }
 
 .offer-bBg {
-    line-height: 1.2em;
-    font-size: 50px;
     animation: bBgAnim 1.5s;
     color: #fff;
     background: #000;
@@ -155,6 +147,7 @@
     background: #FFCB05;
     margin-left: 255px;
     max-height: 99px;
+    max-height: 70px;
     -webkit-animation: yBgAnim 1.5s;
 }
 
@@ -186,8 +179,7 @@
     margin: 0 auto;
 }
 
-/* SCREEN Unipro About */
-/* -------------------------------------------------------------------------- */
+// ABOUT SECTION
 .about-section {
     padding-top: 116px;
 }
@@ -241,8 +233,7 @@
     position: relative;
 }
 
-//* SCREEN Unipro Pallete */
-/* -------------------------------------------------------------------------- */
+// PALLETE SECTION
 .pallete-section {
     position: relative;
     padding-top: 237px;
@@ -260,11 +251,11 @@
 .pallete-bg {
     z-index: -1;
     position: absolute;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    background: url(../images/unipro/unipro-colors.png) no-repeat center right / contain;
-    right: 0;
-    top: 0;
+    background: url(../images/liom/liom-palleteBg.png) no-repeat center right / contain;
+    right: 50px;
+    top: -80px;
 }
 
 .pallete-title {
@@ -312,38 +303,32 @@
         border-radius: 50%;
         width: 56px;
         height: 56px;
-        background: #0175C2;
+        background: #000;
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-            0 0 0 6px rgba(1, 117, 194, 0.3),
-            0 0 0 12px rgba(1, 117, 194, 0.1);
+            0 0 0 6px rgba(0, 0, 0, 0.3),
+            0 0 0 12px rgba(0, 0, 0, 0.1);
+        ;
 
         &.cardCol2 {
-            background: #4AB0E1;
+            background: #FEFEFE;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-                0 0 0 6px rgba(74, 176, 225, 0.3),
-                0 0 0 12px rgba(74, 176, 225, 0.1);
+                0 0 0 6px rgba(254, 254, 254, 0.3),
+                0 0 0 12px rgba(254, 254, 254, 0.1);
         }
 
         &.cardCol3 {
-            background: #DAF1FF;
+            background: #D31920;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-                0 0 0 6px rgba(218, 241, 255, 0.3),
-                0 0 0 12px rgba(218, 241, 255, 0.1);
+                0 0 0 6px rgba(211, 25, 32, 0.3),
+                0 0 0 12px rgba(211, 25, 32, 0.1);
             ;
         }
 
         &.cardCol4 {
-            background: #A3A3A1;
+            background: #F6F6F6;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-                0 0 0 6px rgba(163, 163, 161, 0.3),
-                0 0 0 12px rgba(163, 163, 161, 0.1);
-        }
-
-        &.cardCol5 {
-            background: #F3F5F4;
-            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-                0 0 0 6px rgba(243, 245, 244, 0.3),
-                0 0 0 12px rgba(243, 245, 244, 0.1);
+                0 0 0 6px rgba(246, 246, 246, 0.3),
+                0 0 0 12px rgba(246, 246, 246, 0.1);
         }
     }
 
@@ -355,8 +340,7 @@
 }
 
 
-/* SCREEN Unipro Technology */
-/* -------------------------------------------------------------------------- */
+// TECHNOLOGIES SECTION
 .technology-section {
     padding-bottom: 75px;
 }
@@ -393,8 +377,7 @@
 }
 
 
-/* SCREEN Unipro Pages */
-/* -------------------------------------------------------------------------- */
+// PAGES SECTION
 
 .pages-title {
     padding-bottom: 50px;
@@ -403,39 +386,32 @@
         font-size: 50px;
         font-weight: 700;
         line-height: 1.2em;
+
     }
 }
 
-.pages-pR1>img {
-    margin-left: -100px;
-}
-
-.pages-pR1 a {
-    display: inline-block;
-}
-
-.pages-pR2 {
-    display: flex;
-
+.pages-pR1 {
     a {
         display: inline-block;
     }
+}
 
-    a:nth-child(3n-1) {
-        margin-top: 70px;
-        margin-right: 40px;
-        margin-left: 40px;
-    }
-
-    a:nth-child(3n) {
-        margin-top: 150px;
+.pages-pR1>div:last-of-type {
+    a {
+        margin-top: 50px;
     }
 }
 
+.pages-pR1>div:first-of-type {
+    a:first-of-type {
+        margin-left: -80px;
+    }
+}
 
-/* SCREEN Unipro Adaptive */
-/* -------------------------------------------------------------------------- */
+// ADAPTIVE SECTION 
 .adaptive-title {
+    margin-top: 100px;
+    
     h2 {
         font-size: 50px;
         font-weight: 700;
@@ -477,16 +453,15 @@
 }
 
 .adImg-Main {
-    height: 745px;
-    width: 1050px;
+    height: 630px;
     top: -60px;
     right: 250px;
     z-index: 1;
 }
 
 .adImg-Bottom {
-    width: 743px;
-    height: 266px;
+    width: auto;
+    height: 230px;
     top: 630px;
     right: 365px;
     z-index: 1;
@@ -511,8 +486,8 @@
     }
 }
 
-/* SCREEN Unipro Contacts */
-/* -------------------------------------------------------------------------- */
+
+// CONTACTS SECTION
 .contacts-section {
     background: rgb(255, 255, 255);
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, rgba(245, 245, 245, 1) 50%);
@@ -552,8 +527,7 @@
 }
 
 
-/* SCREEN Unipro Contacts Form */
-/* -------------------------------------------------------------------------- */
+// FORM 
 .contacts-infoForm {
     padding-left: 100px;
 
@@ -669,11 +643,10 @@
     .wpcf7-checkbox input:checked~.wpcf7-list-item-label:after {
         opacity: 1;
     }
-    
 }
 
 .footer-section {
-    background: url(../images/unipro/unipro-footer.png) no-repeat center top / cover;
+    background: url(../images/liom/liom-footer.png) no-repeat center top / cover;
     color: #fff;
 }
 
@@ -683,8 +656,11 @@
     h2 {
         font-size: 33px;
         margin-bottom: 25px;
+        line-height: 1.2em;
     }
 }
+
+
 
 .footer-info {
     p {

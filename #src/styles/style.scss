@@ -8,7 +8,6 @@
 @import 'utils/_functions';
 @import 'utils/_mixins';
 @import 'utils/_media-queries';
-@import 'utils/_media.scss';
 @import 'utils/_fonts';
 @import 'utils/_reset';
 // @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -35,8 +34,21 @@
 @import 'pages/page-contacts';
 @import 'pages/page-about';
 @import 'pages/page-portfolio';
-@import 'pages/page-unipro';
 
+// !!!!!! ОТКЛЮЧИТЬ ПЕРЕД ИНТЕГРАЦИЕЙ || ИСПОЛЬЗОВАТЬ РАЗНЫЕ ШАБЛОНЫ !!!!!!
+@import 'pages/page-unipro';
+// @import 'pages/page-doosan';
+// @import 'pages/page-liom';
+// @import 'pages/page-montegrappa';
+
+
+
+/* Media for Pages !!!!!! ОТКЛЮЧИТЬ ПЕРЕД ИНТЕГРАЦИЕЙ || ИСПОЛЬЗОВАТЬ РАЗНЫЕ ШАБЛОНЫ !!!!!! */
+/* -------------------------------------------------------------------------- */
+@import 'media/page-media-unipro';
+// @import 'media/page-media-doosan';
+// @import 'media/page-liom-media';
+// @import 'media/page-montegrappa-media';
 
 /* Main Page */
 /* -------------------------------------------------------------------------- */

@@ -1,17 +1,10 @@
-/* -------------------------------------------------------------------------- 
- * >>> PAGE : Unipro 
- * -------------------------------------------------------------------------- */
-
- // SCROLL OFF
+// SCROLL OFF
 .scroll-block {
     overflow: hidden;
 }
-.menu-active {
-    margin-right: 10px;
-}
 
-/* SCREEN Unipro Header */
-/* -------------------------------------------------------------------------- */
+
+// Header section
 .header-container {
     padding: 25px 5%;
     margin: 0 auto;
@@ -74,8 +67,11 @@
 }
 
 // HIDDEN MENU
+.menu-active {
+    margin-right: 10px;
+}
+
 .header-hiddenMenu {
-    display: none;
     z-index: 1;
     position: absolute;
     left: 0;
@@ -91,8 +87,16 @@
     font-size: 100px;
 }
 
-/* SCREEN Unipro Offer */
-/* -------------------------------------------------------------------------- */
+// DOOSAN AWARD
+
+.doosan-award {
+    position: fixed;
+    left: 0;
+    top: 20%;
+    z-index: 3;
+}
+
+// OFFER SECTION
 @keyframes bBgAnim {
     from {
         width: 0px;
@@ -114,7 +118,7 @@
 }
 
 .offer-section {
-    background: url(../images/unipro/unipro-main.jpg) no-repeat center top / cover;
+    background: url(../images/doosan/doosan-main.jpg) no-repeat center top / cover;
     padding-top: 350px;
     position: relative;
 }
@@ -135,8 +139,6 @@
 }
 
 .offer-bBg {
-    line-height: 1.2em;
-    font-size: 50px;
     animation: bBgAnim 1.5s;
     color: #fff;
     background: #000;
@@ -186,8 +188,7 @@
     margin: 0 auto;
 }
 
-/* SCREEN Unipro About */
-/* -------------------------------------------------------------------------- */
+// ABOUT SECTION
 .about-section {
     padding-top: 116px;
 }
@@ -206,6 +207,7 @@
     h2 {
         font-size: 50px;
         margin-bottom: 50px;
+        line-height: 1.2em;
     }
 }
 
@@ -241,8 +243,7 @@
     position: relative;
 }
 
-//* SCREEN Unipro Pallete */
-/* -------------------------------------------------------------------------- */
+// PALLETE SECTION
 .pallete-section {
     position: relative;
     padding-top: 237px;
@@ -260,11 +261,11 @@
 .pallete-bg {
     z-index: -1;
     position: absolute;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    background: url(../images/unipro/unipro-colors.png) no-repeat center right / contain;
-    right: 0;
-    top: 0;
+    background: url(../images/doosan/doosan-palleteBg.png) no-repeat center right / contain;
+    right: 50px;
+    top: -80px;
 }
 
 .pallete-title {
@@ -312,38 +313,32 @@
         border-radius: 50%;
         width: 56px;
         height: 56px;
-        background: #0175C2;
+        background: #FD6222;
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-            0 0 0 6px rgba(1, 117, 194, 0.3),
-            0 0 0 12px rgba(1, 117, 194, 0.1);
+            0 0 0 6px rgba(253, 98, 34, 0.2),
+            0 0 0 12px rgba(253, 98, 34, 0.1);
+        ;
 
         &.cardCol2 {
-            background: #4AB0E1;
+            background: #000;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-                0 0 0 6px rgba(74, 176, 225, 0.3),
-                0 0 0 12px rgba(74, 176, 225, 0.1);
+                0 0 0 6px rgba(0, 0, 0, 0.3),
+                0 0 0 12px rgba(0, 0, 0, 0.1);
         }
 
         &.cardCol3 {
-            background: #DAF1FF;
+            background: #F2F2F4;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-                0 0 0 6px rgba(218, 241, 255, 0.3),
-                0 0 0 12px rgba(218, 241, 255, 0.1);
+                0 0 0 6px rgba(220, 220, 220, 0.3),
+                0 0 0 12px rgba(220, 220, 220, 0.1);
             ;
         }
 
         &.cardCol4 {
-            background: #A3A3A1;
+            background: #575757;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-                0 0 0 6px rgba(163, 163, 161, 0.3),
-                0 0 0 12px rgba(163, 163, 161, 0.1);
-        }
-
-        &.cardCol5 {
-            background: #F3F5F4;
-            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-                0 0 0 6px rgba(243, 245, 244, 0.3),
-                0 0 0 12px rgba(243, 245, 244, 0.1);
+                0 0 0 6px rgba(87, 87, 87, 0.3),
+                0 0 0 12px rgba(87, 87, 87, 0.1);
         }
     }
 
@@ -355,8 +350,7 @@
 }
 
 
-/* SCREEN Unipro Technology */
-/* -------------------------------------------------------------------------- */
+// TECHNOLOGIES SECTION
 .technology-section {
     padding-bottom: 75px;
 }
@@ -393,8 +387,7 @@
 }
 
 
-/* SCREEN Unipro Pages */
-/* -------------------------------------------------------------------------- */
+// PAGES SECTION
 
 .pages-title {
     padding-bottom: 50px;
@@ -402,45 +395,30 @@
     h2 {
         font-size: 50px;
         font-weight: 700;
-        line-height: 1.2em;
     }
 }
 
-.pages-pR1>img {
-    margin-left: -100px;
+.pages-pR1>div:nth-child(2),
+.pages-pR1>div:nth-child(4) {
+    margin-top: 180px;
 }
 
-.pages-pR1 a {
-    display: inline-block;
+.pages-pR1>div:nth-child(odd) {
+    margin-top: -180px;
 }
 
-.pages-pR2 {
-    display: flex;
-
-    a {
-        display: inline-block;
-    }
-
-    a:nth-child(3n-1) {
-        margin-top: 70px;
-        margin-right: 40px;
-        margin-left: 40px;
-    }
-
-    a:nth-child(3n) {
-        margin-top: 150px;
-    }
+.pages-pR1>div:nth-child(1),
+.pages-pR1>div:nth-child(3) {
+    margin-top: 0px;
 }
 
-
-/* SCREEN Unipro Adaptive */
-/* -------------------------------------------------------------------------- */
+// ADAPTIVE SECTION 
 .adaptive-title {
+    margin-top: 100px;
     h2 {
         font-size: 50px;
         font-weight: 700;
         margin-bottom: 20px;
-        line-height: 1.2em;
     }
 
     p {
@@ -477,16 +455,15 @@
 }
 
 .adImg-Main {
-    height: 745px;
-    width: 1050px;
+    height: 630px;
     top: -60px;
     right: 250px;
     z-index: 1;
 }
 
 .adImg-Bottom {
-    width: 743px;
-    height: 266px;
+    width: auto;
+    height: 230px;
     top: 630px;
     right: 365px;
     z-index: 1;
@@ -511,8 +488,8 @@
     }
 }
 
-/* SCREEN Unipro Contacts */
-/* -------------------------------------------------------------------------- */
+
+// CONTACTS SECTION
 .contacts-section {
     background: rgb(255, 255, 255);
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, rgba(245, 245, 245, 1) 50%);
@@ -552,8 +529,7 @@
 }
 
 
-/* SCREEN Unipro Contacts Form */
-/* -------------------------------------------------------------------------- */
+// FORM 
 .contacts-infoForm {
     padding-left: 100px;
 
@@ -669,22 +645,26 @@
     .wpcf7-checkbox input:checked~.wpcf7-list-item-label:after {
         opacity: 1;
     }
-    
 }
 
+
+
 .footer-section {
-    background: url(../images/unipro/unipro-footer.png) no-repeat center top / cover;
+    background: url(../images/doosan/doosan-footerBg.png) no-repeat center top / cover;
     color: #fff;
+    h2 {
+        font-size: 33px;
+        margin-bottom: 25px;
+        line-height: 1.2em;
+    }
 }
 
 .footer {
     padding-top: 33px;
     padding-bottom: 43px;
-    h2 {
-        font-size: 33px;
-        margin-bottom: 25px;
-    }
 }
+
+
 
 .footer-info {
     p {

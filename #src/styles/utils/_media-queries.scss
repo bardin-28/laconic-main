@@ -108,7 +108,7 @@ $hd-up:            '(min-width: 1920px)';
   @media screen and #{$md-down} {
     @content;
   }
-}
+} 
 
 @mixin tablet-lg {
   @media screen and #{$tablet-landscape} {

@@ -285,9 +285,6 @@ $(document).ready(function($) {
     //     alert("Window Height: " + $(window).height() + ", Document Height: " + $(document).height() + ", content Height: " + $('.site-content').height());
     // }
 
-    new WOW().init();
-
-
     $(window).resize(function() {
 
         if ($(window).width() <= 1280) {
@@ -302,13 +299,13 @@ $(document).ready(function($) {
 
 
 // SCROLL TO SECTION
-$(document).ready(function () {
-    $("a").click(function () {
-        elementClick = $(this).attr("href");
-        destination = $(elementClick).offset().top;
-        $("body,html").animate({ scrollTop: destination }, 1000);
-    });
-});
+// $(document).ready(function () {
+//     $("a").click(function () {
+//         elementClick = $(this).attr("href");
+//         destination = $(elementClick).offset().top;
+//         $("body,html").animate({ scrollTop: destination }, 1000);
+//     });
+// });
 
 // ANIMATION  FUNCTIONS
 const toogleMenuBtn = document.getElementsByClassName('header-menu')[0];
@@ -327,112 +324,112 @@ if(toogleMenuBtn){
 }
 
 // Parallax Func
-if ($(window).width() > 1199) {
-    $('body').parallax({
-        'elements': [
-            {
-                'selector': '.adImg-Left',
-                'properties': {
-                    'x': {
-                        'right': {
-                            'initial': -900,
-                            'multiplier': 0.04,
-                            'unit': 'px',
-                            'invert': true
-                        }
-                    },
-                    'y': {
-                        'top': {
-                            'initial': -220,
-                            'multiplier': 0.04,
-                            'unit': 'px',
-                            'invert': true
-                        }
-                    }
-                }
-            }
-        ]
-    })
-}
-if ($(window).width() > 1199) {
-    $('body').parallax({
-        'elements': [
-            {
-                'selector': '.adImg-Right',
-                'properties': {
-                    'x': {
-                        'right': {
-                            'initial': -135,
-                            'multiplier': 0.04,
-                            'unit': 'px',
-                            'invert': true
-                        }
-                    },
-                    'y': {
-                        'top': {
-                            'initial': -460,
-                            'multiplier': 0.04,
-                            'unit': 'px',
-                            'invert': true
-                        }
-                    }
-                }
-            }
-        ]
-    })
-}
-if ($(window).width() > 1199) {
-    $('body').parallax({
-        'elements': [
-            {
-                'selector': '.adImg-Main',
-                'properties': {
-                    'x': {
-                        'right': {
-                            'initial': -260,
-                            'multiplier': 0.04,
-                            'unit': 'px',
-                            'invert': true
-                        }
-                    },
-                    'y': {
-                        'top': {
-                            'initial': -280,
-                            'multiplier': 0.04,
-                            'unit': 'px',
-                            'invert': false
-                        }
-                    }
-                }
-            }
-        ]
-    })
-}
-if ($(window).width() > 1199) {
-    $('body').parallax({
-        'elements': [
-            {
-                'selector': '.adImg-Bottom',
-                'properties': {
-                    'x': {
-                        'right': {
-                            'initial': -340,
-                            'multiplier': 0.04,
-                            'unit': 'px',
-                            'invert': true
-                        }
-                    },
-                    'y': {
-                        'top': {
-                            'initial': -860,
-                            'multiplier': 0.04,
-                            'unit': 'px',
-                            'invert': true
-                        }
-                    }
-                }
-            }
-        ]
-    })
-}
+// if ($(window).width() > 1199) {
+//     $('body').parallax({
+//         'elements': [
+//             {
+//                 'selector': '.adImg-Left',
+//                 'properties': {
+//                     'x': {
+//                         'right': {
+//                             'initial': -900,
+//                             'multiplier': 0.04,
+//                             'unit': 'px',
+//                             'invert': true
+//                         }
+//                     },
+//                     'y': {
+//                         'top': {
+//                             'initial': -220,
+//                             'multiplier': 0.04,
+//                             'unit': 'px',
+//                             'invert': true
+//                         }
+//                     }
+//                 }
+//             }
+//         ]
+//     })
+// }
+// if ($(window).width() > 1199) {
+//     $('body').parallax({
+//         'elements': [
+//             {
+//                 'selector': '.adImg-Right',
+//                 'properties': {
+//                     'x': {
+//                         'right': {
+//                             'initial': -135,
+//                             'multiplier': 0.04,
+//                             'unit': 'px',
+//                             'invert': true
+//                         }
+//                     },
+//                     'y': {
+//                         'top': {
+//                             'initial': -460,
+//                             'multiplier': 0.04,
+//                             'unit': 'px',
+//                             'invert': true
+//                         }
+//                     }
+//                 }
+//             }
+//         ]
+//     })
+// }
+// if ($(window).width() > 1199) {
+//     $('body').parallax({
+//         'elements': [
+//             {
+//                 'selector': '.adImg-Main',
+//                 'properties': {
+//                     'x': {
+//                         'right': {
+//                             'initial': -260,
+//                             'multiplier': 0.04,
+//                             'unit': 'px',
+//                             'invert': true
+//                         }
+//                     },
+//                     'y': {
+//                         'top': {
+//                             'initial': -280,
+//                             'multiplier': 0.04,
+//                             'unit': 'px',
+//                             'invert': false
+//                         }
+//                     }
+//                 }
+//             }
+//         ]
+//     })
+// }
+// if ($(window).width() > 1199) {
+//     $('body').parallax({
+//         'elements': [
+//             {
+//                 'selector': '.adImg-Bottom',
+//                 'properties': {
+//                     'x': {
+//                         'right': {
+//                             'initial': -340,
+//                             'multiplier': 0.04,
+//                             'unit': 'px',
+//                             'invert': true
+//                         }
+//                     },
+//                     'y': {
+//                         'top': {
+//                             'initial': -860,
+//                             'multiplier': 0.04,
+//                             'unit': 'px',
+//                             'invert': true
+//                         }
+//                     }
+//                 }
+//             }
+//         ]
+//     })
+// }
 
