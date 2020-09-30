@@ -106,7 +106,7 @@ function scripts_libraries() {
             '#src/libraries/fullPage-3.0.8/fullpage.min.js',
             '#src/libraries/swiper-5.3.8/swiper.min.js',
             '#src/libraries/blazy-1.8.2/blazy.min.js',
-            // '#src/libraries/animate/wow.min.js'
+            '#src/libraries/animate/wow.min.js',
             // '#src/libraries/bootstrap/bootstrap.min.css'
             // '#src/libraries/fancybox-3.5.7/dist/jquery.fancybox.min.js'
             // '#src/libraries/wow/wow.min.js',
@@ -128,8 +128,11 @@ function images() {
 }
 
 function fonts() {
+    src(path.src.fonts)
+        .pipe(ttf2woff())                   // Преобразование шрифтов в WOFF
+        .pipe(dest(path.build.fonts));
     return src(path.src.fonts)
-        .pipe(ttf2woff2())
+        .pipe(ttf2woff2())                  // Преобразование шрифтов в WOFF2
         .pipe(dest(path.build.fonts));
 }
 function libraries(){
