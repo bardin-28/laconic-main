@@ -53,7 +53,7 @@ function browserSyns(params) {
     browsersync.init({
         server: {
             baseDir: "./dist/",
-            startPath: "./unipro.html"
+            startPath: "./"
         },
         port: 3005,
         notify: false

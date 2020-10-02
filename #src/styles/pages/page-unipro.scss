@@ -102,6 +102,15 @@
     overflow: hidden;
 }
 
+.bl-scroll::-webkit-scrollbar{width: 5px;height: 5px;};
+.bl-scroll::-webkit-scrollbar-track-piece{background-color: #fff;};
+.bl-scroll::-webkit-scrollbar-thumb:vertical{height: 5px;background-color: $yellow;};
+.bl-scroll::-webkit-scrollbar-thumb:horizontal{width: 5px;background-color: $yellow;};
+.bl-scroll::-moz-scrollbar{width: 5px;height: 5px;};
+.bl-scroll::-moz-scrollbar-track-piece{background-color: $yellow;};
+.bl-scroll::-moz-scrollbar-thumb:vertical{height: 5px;background-color: $yellow;};
+.bl-scroll::-moz-scrollbar-thumb:horizontal{width: 5px;background-color: $yellow;};
+
 /* PAGE UNIPRO OFFER */
 /* -------------------------------------------------------------------------- */
 .offer-section{
@@ -278,6 +287,17 @@
     }
 }
 
+.tasks-card-title{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+
+    @include tablet-lg-up{
+        font-size: 30px;
+    }
+}
+
 .about-title-caption{
     font-size: 18px;
 }
@@ -310,16 +330,6 @@
     font-weight: 700;
     padding-top: 10px;
     padding-left: 15px;
-}
-
-.tasks-card-title {
-    font-size: 25px;
-    margin-bottom: 10px;
-
-    @include tablet-lg-up {
-        font-size: 25px;
-        margin-bottom: 10px;
-    }
 }
 
 .task-card-about {
@@ -716,11 +726,11 @@
         }
 
         a {
-            font-size: 26px;
+            font-size: 22px;
             line-height: 150%;
 
             @include tablet-lg-up{
-                font-size: 30px;
+                font-size: 25px;
             }
         }
 
@@ -893,8 +903,11 @@
     padding-top: 33px;
     padding-bottom: 43px;
     h2 {
-        font-size: 33px;
+        font-size: 25px;
         margin-bottom: 25px;
+        @include tablet-lg-up{
+            font-size: 33px;
+        }
     }
 }
 
