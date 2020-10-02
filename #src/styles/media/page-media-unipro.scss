@@ -566,15 +566,6 @@
         }
     }
 
-    .offer-bBg {
-        width: 350px;
-    }
-
-    .offer-yBg {
-        width: 383px;
-        font-size: 14px;
-    }
-
     @keyframes bBgAnim {
         from {
             width: 0px;
@@ -601,17 +592,7 @@
     }
 
     .about-tasks {
-        padding-bottom: 55px;
 
-        h2 {
-            font-size: 35px;
-            margin-bottom: 35px;
-        }
-    }
-
-    .tasksCardCaption h3 {
-        font-size: 25px;
-        margin-bottom: 10px;
     }
 
     // PALLETE SECTION
@@ -748,46 +729,6 @@
         margin-right: 15px;
     }
 
-    // OFFER SECTION
-    .offer-titleBlock {
-        h1 {
-            font-size: 30px;
-        }
-    }
-
-    .offer-bBg {
-        width: 240px;
-    }
-
-    .offer-yBg {
-        width: 235px;
-        height: auto;
-        max-height: none;
-
-        p {
-            max-height: 90px;
-        }
-    }
-
-    @keyframes bBgAnim {
-        from {
-            width: 0px;
-        }
-
-        to {
-            width: 240px;
-        }
-    }
-
-    @keyframes yBgAnim {
-        0% {
-            width: 0px;
-        }
-
-        100% {
-            width: 235px;
-        }
-    }
 
 
     // ABOUT SECTION

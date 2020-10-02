@@ -33,7 +33,7 @@ $sm-up:                '(min-width: 576px)';
 $md-up:                '(min-width: 768px)';
 
 // Medium devices (tablets, 992px and up)
-// $tablet-landscape-up:  '(min-width: 992px)';
+ $tablet-landscape-up:  '(min-width: 992px)';
 
 // Extra large devices (large desktops, 1200px and up)
 $lg-up:            '(min-width: 1220px)';
@@ -79,6 +79,12 @@ $hd-up:            '(min-width: 1920px)';
 
 @mixin lg-up {
   @media screen and #{$lg-up} {
+    @content;
+  }
+}
+
+@mixin tablet-lg-up {
+  @media screen and #{$tablet-landscape-up} {
     @content;
   }
 }

@@ -298,14 +298,13 @@ $(document).ready(function($) {
 });
 
 
-// SCROLL TO SECTION
-// $(document).ready(function () {
-//     $("a").click(function () {
-//         elementClick = $(this).attr("href");
-//         destination = $(elementClick).offset().top;
-//         $("body,html").animate({ scrollTop: destination }, 1000);
-//     });
-// });
+$(document).ready(function () {
+    $("a").click(function () {
+        elementClick = $(this).attr("href");
+        destination = $(elementClick).offset().top;
+        $("body,html").animate({ scrollTop: destination - 50}, 1000);
+    });
+});
 
 // ANIMATION  FUNCTIONS
 const toogleMenuBtn = document.getElementsByClassName('header-menu')[0];

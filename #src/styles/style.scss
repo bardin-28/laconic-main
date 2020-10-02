@@ -10,7 +10,7 @@
 @import 'utils/_media-queries';
 @import 'utils/fonts';
 @import 'utils/_reset';
-// @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// @import '../../node_modules/bootstrap/dist/css/bootstrap.min.scss';
 
 /* Layout */
 /* -------------------------------------------------------------------------- */
@@ -26,7 +26,6 @@
 @import 'components/animation';
 @import 'components/lightbox.min.scss';
 
-
 /* Pages */
 /* -------------------------------------------------------------------------- */
 @import 'pages/page-intro';
@@ -34,15 +33,19 @@
 @import 'pages/page-about';
 @import 'pages/page-portfolio';
 
-// !!!!!! ОТКЛЮЧИТЬ ПЕРЕД ИНТЕГРАЦИЕЙ || ИСПОЛЬЗОВАТЬ РАЗНЫЕ ШАБЛОНЫ !!!!!!
-//@import 'pages/page-unipro';
+/* Pages Inner */
+/* -------------------------------------------------------------------------- */
+
+@import 'pages/page-unipro';
 // @import 'pages/page-doosan';
 // @import 'pages/page-liom';
 // @import 'pages/page-montegrappa';
 
+//////////////////////////////////////////////////////////////////////////////////////
 
 
-/* Media for Pages !!!!!! ОТКЛЮЧИТЬ ПЕРЕД ИНТЕГРАЦИЕЙ || ИСПОЛЬЗОВАТЬ РАЗНЫЕ ШАБЛОНЫ !!!!!! */
+
+/* Media for Pages */
 /* -------------------------------------------------------------------------- */
 //@import 'media/page-media-unipro';
 // @import 'media/page-media-doosan';
@@ -115,7 +118,6 @@ body {
 
 h1 {
   font-weight: bold;
-  font-style: 400;
 }
 
 .screen-slide {
