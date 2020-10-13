@@ -1,21 +1,32 @@
-// SCROLL OFF
-.scroll-block {
-    overflow: hidden;
+/* --------------------------------------------------------------------------
+ * >>> Montegrappa PAGE
+ * -------------------------------------------------------------------------- */
+.header-section{
+    padding: 13px 0;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=0, Color=#000000)";/*IE 8*/
+    -moz-box-shadow: 0 2px 8px 4px rgba(0,0,0,0.1);/*FF 3.5+*/
+    -webkit-box-shadow: 0 2px 8px 4px rgba(0,0,0,0.1);/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 0 2px 8px 4px rgba(0,0,0,0.1);/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#000000); /*IE 5.5-7*/
 }
 
-// Header section
-.header-container {
-    padding: 25px 5%;
-    margin: 0 auto;
-    max-width: 1697px;
+.header-body{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.header-logo{
+    height: 100%;
+}
+
 .header-menu {
     z-index: 2;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     cursor: pointer;
     font-weight: 500;
@@ -26,9 +37,11 @@
     font-size: 20px;
     font-weight: 300;
     margin-right: 19px;
+    cursor: pointer;
 }
 
 .header-toogleButton {
+    cursor: pointer;
     width: 55px;
     height: 55px;
     padding: 0;
@@ -65,11 +78,6 @@
     transition: all .3s;
 }
 
-// HIDDEN MENU
-.menu-active {
-    margin-right: 10px;
-}
-
 .header-hiddenMenu {
     z-index: 1;
     position: absolute;
@@ -83,198 +91,326 @@
     justify-content: center;
     align-items: center;
     background: #FFCC00;
-    font-size: 100px;
+    font-size: 50px;
+
+    @include tablet-lg-up{
+        font-size: 100px;
+    }
 }
 
-// OFFER SECTION
-@keyframes bBgAnim {
-    from {
-        width: 0px;
-    }
+.scroll-block {
+    overflow: hidden;
+}
 
-    to {
+.bl-scroll::-webkit-scrollbar{width: 5px;height: 5px;};
+.bl-scroll::-webkit-scrollbar-track-piece{background-color: #fff;};
+.bl-scroll::-webkit-scrollbar-thumb:vertical{height: 5px;background-color: $yellow;};
+.bl-scroll::-webkit-scrollbar-thumb:horizontal{width: 5px;background-color: $yellow;};
+.bl-scroll::-moz-scrollbar{width: 5px;height: 5px;};
+.bl-scroll::-moz-scrollbar-track-piece{background-color: $yellow;};
+.bl-scroll::-moz-scrollbar-thumb:vertical{height: 5px;background-color: $yellow;};
+.bl-scroll::-moz-scrollbar-thumb:horizontal{width: 5px;background-color: $yellow;};
+
+/* PAGE Montegrappa OFFER */
+/* -------------------------------------------------------------------------- */
+.offer-section{
+    position: relative;
+    padding-top: 81px;
+    background: url(../images/montegrappa/montegrappa-mainBg.png) no-repeat center top / cover;
+    padding-bottom: 45px;
+    min-height: 90vh;
+}
+
+@keyframes titleAnim {
+    from { width: 0 }
+    to { width: 240px;}
+}
+@include sm-up{
+    @keyframes titleAnim {
+        from { width: 0 }
+        to { width: 320px;}
+    }
+}
+
+@include md-up{
+    @keyframes titleAnim {
+        from { width: 0 }
+        to { width: 400px; }
+    }
+}
+
+@include tablet-lg-up{
+    @keyframes titleAnim {
+        from { width: 0 }
+        to { width: 566px; }
+    }
+}
+
+@keyframes titleCaptAnim {
+    from { width: 0 }
+    to { width: 235px; }
+}
+
+@include tablet-lg-up{
+    @keyframes titleCaptAnim {
+        from { width: 0 }
+        to { width: 747px; }
+    }
+}
+
+@include xs-up{
+    @keyframes titleCaptAnim {
+        from { width: 0 }
+        to { width: 260px; }
+    }
+}
+
+@include sm-up{
+    @keyframes titleCaptAnim {
+        from { width: 0 }
+        to { width: 380px; }
+    }
+}
+
+@include md-up{
+    @keyframes titleCaptAnim {
+        from { width: 0 }
+        to { width: 460px; }
+    }
+}
+@include tablet-lg-up{
+    @keyframes titleCaptAnim {
+        from { width: 0 }
+        to { width: 747px; }
+    }
+}
+
+.offer-body{
+    padding-top: 300px;
+    padding-bottom: 155px;
+}
+
+.offer-title-top{
+    padding: 19px 20px 16px 20px;
+    background: #000;
+    width: 240px;
+    color: #fff;
+    animation: titleAnim 1s ease-in-out;
+
+    @include sm-up{
+        width: 320px;
+    }
+    @include md-up{
+        width: 400px;
+    }
+    @include tablet-lg-up{
         width: 566px;
     }
 }
 
-@keyframes yBgAnim {
-    0% {
-        width: 0px;
+.offer-title{
+    font-size: 25px;
+
+    @include md-up{
+        font-size: 26px;
+        line-height: 1em;
     }
-
-    100% {
-        width: 747px;
-    }
-}
-
-.offer-section {
-    background: url(../images/montegrappa/montegrappa-mainBg.png) no-repeat center top / cover;
-    padding-top: 350px;
-    position: relative;
-}
-
-.offer-titleBlock {
-    padding-bottom: 100px;
-    padding-bottom: 42px;
-
-    h1 {
+    @include tablet-lg-up{
         font-size: 50px;
-        font-weight: 700;
-        line-height: 1.2em;
-    }
 
-    p {
-        font-size: 20px;
     }
 }
 
-.offer-bBg {
-    animation: bBgAnim 1.5s;
-    color: #fff;
-    background: #000;
-    width: 566px;
-    padding: 19px 25px;
-    padding-bottom: 16px;
-    text-transform: uppercase;
-    -webkit-animation: bBgAnim 1.5s;
-}
-
-.offer-yBg {
-    animation: yBgAnim 1.5s;
-    width: 747px;
-    padding: 20px 25px;
-    padding-right: 150px;
-    background: #FFCB05;
-    margin-left: 255px;
-    max-height: 119px;
-    -webkit-animation: yBgAnim 1.5s;
-}
-
-.offer-captionSection {
-    max-width: 1700px;
-    padding: 0px 5%;
-}
-
-.offer-caption {
-    padding-top: 65px;
-    padding-bottom: 33px;
+.offer-title-bottom{
+    background: $yellow;
+    width: 235px;
+    color: #000;
+    padding: 19px 20px 16px 20px;
+    min-height: 102px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    max-height: 161px;
+    margin-left: 61px;
+    animation: titleCaptAnim 1s ease-in-out;
+
+    @include xs-up{
+        width: 260px;
+    }
+    @include sm-up{
+        width: 380px;
+        max-height: 79px;
+    }
+    @include md-up{
+        width: 460px;
+        margin-left: 135px;
+    }
+    @include tablet-lg-up{
+        width: 747px;
+        max-height: 94px;
+    }
+    @include lg-up{
+        margin-left: 255px;
+    }
 }
 
-.offer-downArrow {
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 25px;
-    text-decoration: none;
-    transition: $anim1;
+.offer-caption{
+    @include sm-up{
+        max-height: 90px;
+    }
+    @include tablet-lg-up{
+        font-size: 20px;
+    }
+    @include tablet-lg-up{
+        max-height: none;
+    }
 }
 
-.offer-downArrowBlock {
-    width: 100%;
+.offer-footer{
     text-align: center;
-    font-size: 15px;
-    margin: 0 auto;
 }
 
-// ABOUT SECTION
+/* Page Montegrappa About */
+/* -------------------------------------------------------------------------- */
 .about-section {
-    padding-top: 116px;
+    padding-top: 80px;
+}
+
+.about-body{
+    padding-bottom: 62px;
+
+}
+
+.about-img-wrapper{
+    margin-bottom: 25px;
 }
 
 .about-title {
-    padding-bottom: 62px;
-
     p {
+        margin-top: 30px;
         font-size: 20px;
     }
+}
+
+.about-title-caption{
+    font-size: 18px;
 }
 
 .about-tasks {
-    padding-bottom: 100px;
+    padding-bottom: 55px;
 
+    @include tablet-lg-up{
+        padding-bottom: 100px;
+    }
     h2 {
-        font-size: 50px;
-        margin-bottom: 50px;
-        line-height: 1.2em;
+        font-size: 35px;
+        margin-bottom: 35px;
+
+        @include tablet-lg-up{
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
     }
 }
 
-.tasksCard {
+.tasks-card {
     display: flex;
+    margin-bottom: 30px;
 }
 
-.tasksCardNumb {
+.tasks-card-numb {
     color: #FFCB05;
     font-size: 50px;
     font-weight: 700;
-    padding-top: 15px;
-    padding-left: 35px;
+    padding-top: 10px;
+    padding-left: 15px;
 }
 
-.tasksCardCaption {
-    h3 {
-        font-size: 30px;
-        margin-bottom: 30px;
-    }
+.tasks-card-title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.2em;
 
-    p {
-        font-weight: 300;
-        font-size: 20px;
+    @include tablet-lg-up {
+        font-size: 27px;
+        margin-bottom: 10px;
     }
+}
+
+.task-card-about {
+    font-weight: 300;
+    font-size: 20px;
 }
 
 // Video Frame
-.about-videoFrame {
+.about-video-frame {
     display: block;
-    height: 693px;
+    height: 300px;
     background: #C4C4C4;
     position: relative;
+
+    @include md-up{
+        height: 400px;
+    }
+    @include tablet-lg-up{
+        height: 690px;
+    }
 }
 
-// PALLETE SECTION
+//* Page Montegrappa Pallete */
+/* -------------------------------------------------------------------------- */
 .pallete-section {
     position: relative;
-    padding-top: 237px;
-    padding-bottom: 300px;
+    padding-top: 115px;
+    padding-bottom: 100px;
+
+    @include tablet-lg-up{
+        padding-top: 237px;
+        padding-bottom: 300px;
+    }
 }
 
-.pallete {
-    h2 {
+.pallete-title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2em;
+    padding-bottom: 50px;
+
+    @include sm-up{
+        font-size: 35px;
+    }
+    @include tablet-lg-up{
         font-size: 50px;
-        font-weight: 700;
-        line-height: 1.2em;
     }
 }
 
 .pallete-bg {
     z-index: -1;
     position: absolute;
-    width: 50%;
+    width: 66%;
     height: 100%;
     background: url(../images/montegrappa/montegrappa-palleteBg.svg) no-repeat center right / contain;
-    right: 50px;
-    top: -80px;
-}
+    right: 0;
+    top: 0;
 
-.pallete-title {
-    padding-bottom: 50px;
-    width: 535px;
-}
-
-.pallete-caption {
-    h3 {
-        font-weight: 500;
-        font-size: 30px;
+    @include tablet-lg-up{
+        width: 60%;
     }
 }
 
-.pallete-font {
-    h3 {
-        font-weight: 500;
-        margin-bottom: 12px;
-    }
+.pallete-color-title{
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.pallete-font-title {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.pallete-font-caption{
+    font-size: 15px;
 }
 
 .pallete-color {
@@ -305,30 +441,30 @@
         height: 56px;
         background: #0B0025;
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-            0 0 0 6px rgba(11, 0, 37, 0.3),
-            0 0 0 12px rgba(11, 0, 37, 0.1);
-        ;
+        0 0 0 6px rgba(11, 0, 37, 0.3),
+        0 0 0 12px rgba(11, 0, 37, 0.1);
+    ;
 
         &.cardCol2 {
             background: #FEFEFE;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-                0 0 0 6px rgba(254, 254, 254, 0.3),
-                0 0 0 12px rgba(254, 254, 254, 0.1);
+            0 0 0 6px rgba(254, 254, 254, 0.3),
+            0 0 0 12px rgba(254, 254, 254, 0.1);
         }
 
         &.cardCol3 {
             background: #F1F0FE;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-                0 0 0 6px rgba(241, 240, 254, 0.3),
-                0 0 0 12px rgba(241, 240, 254, 0.1);
-            ;
+            0 0 0 6px rgba(241, 240, 254, 0.3),
+            0 0 0 12px rgba(241, 240, 254, 0.1);
+        ;
         }
 
         &.cardCol4 {
             background: #000000;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
-                0 0 0 6px rgba(0, 0, 0, 0.3),
-                0 0 0 12px rgba(0, 0, 0, 0.1);
+            0 0 0 6px rgba(0, 0, 0, 0.3),
+            0 0 0 12px rgba(0, 0, 0, 0.1);
         }
     }
 
@@ -339,25 +475,40 @@
     }
 }
 
-
-// TECHNOLOGIES SECTION
+/* SCREEN Montegrappa Technology */
+/* -------------------------------------------------------------------------- */
 .technology-section {
     padding-bottom: 75px;
 }
 
-.technology {
+.technology-body {
     align-items: center;
 }
 
 .technology-title {
     font-weight: 700;
-    font-size: 48px;
     line-height: 1.2em;
+    font-size:  25px;
+
+    @include sm-up{
+        font-size: 35px;
+    }
+    @include tablet-lg-up{
+        font-size: 48px;
+    }
 }
 
 .technology-icons {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 35px;
+
+    @include xs-up{
+        padding-left: 23px;
+    }
+    @include tablet-lg-up{
+        padding-left: 0;
+    }
 
     &>div {
         display: flex;
@@ -371,13 +522,36 @@
 }
 
 .technology-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 280px;
+    margin: auto;
+    @include md-up{
+        width: 400px;
+    }
+    @include tablet-lg-up{
+        margin-top: 150px;
+    }
 }
 
+/* Page Montegrappa Pages */
+/* -------------------------------------------------------------------------- */
 
-// PAGES SECTION
+.pages-header {
+    padding-bottom: 50px;
+}
+
+.pages-title {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.2em;
+
+    @include sm-up{
+        font-size: 35px;
+    }
+    @include tablet-lg-up{
+        font-size: 50px;
+    }
+}
+
 
 .pages-title {
     padding-bottom: 50px;
@@ -405,72 +579,100 @@
 }
 
 .pages-R1info {
-    display: flex;
+
+    &>div{
+        text-align: center;
+    }
+    @include md-up{
+        display: flex;
+    }
 }
 
 .pages-R1info div a:first-of-type {
     margin-bottom: 50px;
 }
-
-
-// ADAPTIVE SECTION 
+/* Page Montegrappa Adaptive */
+/* -------------------------------------------------------------------------- */
 .adaptive-title {
-    margin-top: 100px;
+    margin-top: 40px;
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 20px;
     line-height: 1.2em;
 
-    h2 {
-        font-size: 50px;
-        font-weight: 700;
-        margin-bottom: 20px;
+    @include sm-up{
+        font-size: 35px;
     }
-
-    p {
-        width: 625px;
-        font-size: 20px;
-        margin-bottom: 110px;
+    @include tablet-lg-up{
+        margin-top: 0;
+        font-size: 50px;
     }
 }
 
-.adaptive-imgContainer {
+.adaptive-title-caption {
+    font-size: 15px;
+    margin-bottom: 110px;
+
+    @include sm-up{
+        font-size: 18px;
+    }
+    @include tablet-lg-up{
+        font-size: 18px;
+        width: 625px;
+        font-size: 20px;
+    }
+}
+
+.adaptive-img-container {
     max-width: 1460px;
     padding: 0px 5%;
     margin: 0 auto;
     position: relative;
-    height: 900px;
-
-    img {
-        position: absolute;
-    }
+    margin-bottom: 30px;
 }
 
-.adImg-Right {
-    right: 120px;
-    top: 220px;
-    height: 285px;
-    width: 400px;
-}
-
-.adImg-Left {
-    top: 0px;
-    right: 900px;
-    height: 385px;
-    width: 460px;
-}
-
-.adImg-Main {
-    height: 630px;
-    top: -60px;
-    right: 250px;
-    z-index: 1;
-}
-
-.adImg-Bottom {
-    width: auto;
-    height: 230px;
-    top: 630px;
-    right: 365px;
-    z-index: 1;
-}
+//.adImg-Right {
+//  right: 9px;
+//  top: 115px;
+//  height: 135px;
+//  width: 124px;
+//
+//  @include tablet-lg-up{
+//    right: 120px;
+//    top: 220px;
+//    height: 285px;
+//    width: 400px;
+//  }
+//}
+//
+//.adImg-Left {
+//  top: 0px;
+//  right: 900px;
+//  height: 385px;
+//  width: 460px;
+//}
+//
+//.adImg-Main {
+//  height: 260px;
+//  width: 320px;
+//  top: -60px;
+//  right: 10px;
+//  z-index: 1;
+//
+//  @include tablet-lg-up{
+//    height: 745px;
+//    width: 1050px;
+//    right: 250px;
+//  }
+//}
+//
+//.adImg-Bottom {
+//  width: 743px;
+//  height: 266px;
+//  top: 630px;
+//  right: 365px;
+//  z-index: 1;
+//}
 
 .adaptive-link {
     display: flex;
@@ -482,6 +684,7 @@
     margin-bottom: 100px;
 
     a {
+        cursor: pointer;
         border-bottom: 2px solid #FFCC00;
         transition: $anim1;
 
@@ -491,11 +694,16 @@
     }
 }
 
-
-// CONTACTS SECTION
+/* SCREEN Montegrappa Contacts */
+/* -------------------------------------------------------------------------- */
 .contacts-section {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, rgba(245, 245, 245, 1) 50%);
+    background: rgb(245, 245, 245);
+    background: linear-gradient(0deg, rgba(245, 245, 245, 1) 62%, rgba(255, 255, 255, 0) 62%);
+
+    @include tablet-lg-up{
+        background: rgb(255, 255, 255);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, rgba(245, 245, 245, 1) 50%);
+    }
 }
 
 .contacts-info {
@@ -507,8 +715,12 @@
         }
 
         a {
-            font-size: 30px;
+            font-size: 22px;
             line-height: 150%;
+
+            @include tablet-lg-up{
+                font-size: 27px;
+            }
         }
 
         &:nth-child(1) {
@@ -532,45 +744,66 @@
 }
 
 
-// FORM 
-.contacts-infoForm {
-    padding-left: 100px;
+/* Page Montegrappa Contacts Form */
+/* -------------------------------------------------------------------------- */
+.contacts-info-title {
+    font-weight: 500;
+    margin-top: 80px;
+    margin-bottom: 22px;
+    font-size: 27px;
+    line-height: 150%;
 
-    h2 {
-        font-weight: 500;
-        margin-top: 31px;
-        margin-bottom: 22px;
+    @include tablet-lg-up{
         font-size: 30px;
-        line-height: 150%;
+        margin-top: 30px;
     }
+}
 
-    &>p {
-        margin-bottom: 57px;
+.contacts-info-caption {
+    margin-bottom: 57px;
+    font-size: 18px;
+
+    @include tablet-lg-up{
         font-size: 20px;
     }
+}
+
+.contacts-info-form {
+    @include tablet-lg-up{
+        padding-left: 100px;
+    }
+
     .wpcf7-list-item-label {
         font-size: 11px;
     }
-    
+
     .wpcf7-form {
         input[type="submit"] {
             display: block;
             width: auto;
             height: 100%;
             position: relative;
-            font-size: 30px;
+            font-size: 20px;
             background: transparent;
             margin-bottom: 50px;
             font-weight: 500;
-            margin-left: 60%;
+            margin-left: 40%;
             transition: $anim1;
-    
+
+            @include sm-up{
+                margin-left: 68%;
+            }
+            @include tablet-lg-up{
+                font-size: 25px;
+                margin-left: 60%;
+            }
+
             &:hover {
                 color: #FFCC00;
-    
+
             }
         }
-    
+
         input {
             width: 100%;
             height: 35px;
@@ -578,7 +811,7 @@
             padding: 18px 16px;
             font-size: 15px;
         }
-    
+
         textarea {
             width: 100%;
             height: 91px;
@@ -587,12 +820,12 @@
             padding: 18px 16px;
             font-size: 15px;
         }
-    
+
         label {
             display: flex;
             align-items: center;
             cursor: pointer;
-    
+
             input {
                 width: 13px;
                 height: 13px;
@@ -601,11 +834,11 @@
             }
         }
     }
-    
+
     .wpcf7-checkbox input {
         display: none;
     }
-    
+
     .wpcf7-checkbox .wpcf7-list-item-label {
         font-style: normal;
         font-weight: 300;
@@ -620,7 +853,7 @@
         -ms-user-select: none;
         user-select: none;
     }
-    
+
     .wpcf7-checkbox .wpcf7-list-item-label:before {
         width: 10px;
         height: 10px;
@@ -631,7 +864,7 @@
         left: 0;
         border: 1px solid #000000;
     }
-    
+
     .wpcf7-checkbox .wpcf7-list-item-label:after {
         width: 10px;
         height: 10px;
@@ -644,16 +877,17 @@
         border: 1px solid #000000;
         opacity: 0;
     }
-    
+
     .wpcf7-checkbox input:checked~.wpcf7-list-item-label:after {
         opacity: 1;
     }
 }
 
-
+/* Page Liom Footer */
+/* -------------------------------------------------------------------------- */
 
 .footer-section {
-    background: url(../images/montegrappa/montegrappa-footerBg.png) no-repeat center top / cover;
+    background: url(../images/doosan/doosan-footerBg.png) no-repeat center top / cover;
     color: #fff;
 }
 
@@ -661,8 +895,11 @@
     padding-top: 33px;
     padding-bottom: 43px;
     h2 {
-        font-size: 33px;
+        font-size: 25px;
         margin-bottom: 25px;
+        @include tablet-lg-up{
+            font-size: 33px;
+        }
     }
 }
 
@@ -701,6 +938,5 @@
         bottom: 0;
         right: -35px;
         transition: $anim1;
-
     }
 }
