@@ -1,7 +1,8 @@
+Проект: 'Laconic Design'
 
-FOR STARTING NEW PROJECT
+Версия для разработчиков
 
-In console:
+    Как запустить проект:
 
-   1. npm i
-   2. gulp
+      1. Находясь в папке с проектом в консоли ввести: 'npm install'
+      2. Запустить сборщик командой: 'gulp'
