@@ -22,6 +22,7 @@
 
 .header-logo{
     height: 100%;
+    cursor: pointer;
 }
 
 .header-menu {
@@ -572,17 +573,8 @@
     display: inline-block;
 }
 
-.pages-pR2{
-    @include tablet-lg{
-        text-align: center;
-    }
-}
-
 .pages-pR2 {
-
-    @include tablet-lg-up{
-        display: flex;
-    }
+    justify-content: center;
 
     a {
         display: inline-block;
